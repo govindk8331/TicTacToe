@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h1 class="page-title">Tic-Tac-Toe</h1>
+            <button class="dark-mode-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="sidebar">
+                <div class="ai-toggle-container">
+                    <label>Play vs AI</label>
+                    <input type="checkbox" id="aiToggle" checked>
+                    <label for="aiToggle" class="toggle-switch"></label>
+                </div>
+                <select id="difficultySelect">
+                    <option value="hard">Hard</option>
+                    <option value="easy">Easy</option>
+                </select>
+                <label for="playerX">
+                    <input type="text" id="playerX" placeholder="Enter Player X Name">
+                </label>
+                <label for="playerO">
+                    <input type="text" id="playerO" placeholder="Enter Player O Name">
+                </label>
+                <div class="scoreboard">
+                    <h2>Scoreboard</h2>
+                    <div class="score-container">
+                        <span class="score-x-label">X: <span id="scoreX">0</span></span>
+                        <span class="score-o-label">O: <span id="scoreO">0</span></span>
+                    </div>
+                </div>
+                <button id="gameButton">Start Game</button>
+                <button id="resetBtn">Reset Game</button>
+            </div>
+            <div class="board-container">
+                <div class="status" id="status">Current Turn: X</div>
+                <div class="board" id="board"></div>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
